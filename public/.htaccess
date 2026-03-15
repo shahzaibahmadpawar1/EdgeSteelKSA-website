@@ -1,0 +1,36 @@
+Options -MultiViews
+RewriteEngine On
+
+# -------------------------------------------------------------------
+# 1. Serve real files directly (static assets, images, JS/CSS, etc.)
+#    NOTE: we deliberately do NOT pass through directories here,
+#    because /en/ is a real directory but we want to serve /en.html.
+# -------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# -------------------------------------------------------------------
+# 2. Append .html for locale-prefixed paths that exist as .html files
+#    e.g.  /en/products  →  /en/products.html
+#          /ar/services  →  /ar/services.html
+#          /en           →  /en.html
+# -------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ /$1.html [L]
+
+# -------------------------------------------------------------------
+# 3. For paths without a locale prefix, try serving from /en/
+#    e.g.  /products  →  /en/products.html
+#          /services  →  /en/services.html
+# (Skips _next, api, locales, media, and files with extensions)
+# -------------------------------------------------------------------
+RewriteCond %{REQUEST_URI} !^/(en|ar)(/|$)
+RewriteCond %{REQUEST_URI} !^/(_next|api|locales|media)(/|$)
+RewriteCond %{REQUEST_URI} !^/[^/]+\.[^/]+$
+RewriteCond %{DOCUMENT_ROOT}/en%{REQUEST_URI}.html -f
+RewriteRule ^(.+)$ /en/$1.html [L]
+
+# -------------------------------------------------------------------
+# 4. Custom 404 page
+# -------------------------------------------------------------------
+ErrorDocument 404 /404.html

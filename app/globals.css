@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── GOOGLE FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+/* ── DESIGN TOKENS ── */
+:root {
+  --white: #ffffff;
+  --grey-bg: #f8f9fa;
+  --border: #e0e2e5;
+  --charcoal: #202124;
+  --slate: #5f6368;
+  --orange: #ff5722;
+  --orange-dark: #e64a19;
+  --cobalt: #1a73e8;
+  --font-main: 'Sora', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+/* ── BASE ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--white);
+  color: var(--charcoal);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-pending.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── HERO LASER LINE ── */
+@keyframes laserScan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.laser-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff5722, transparent);
+  animation: laserScan 4s ease-in-out infinite;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* ── TICKER ── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── SCROLL PULSE ── */
+@keyframes scrollPulse {
+  0%   { left: -100%; }
+  100% { left:  100%; }
+}
+.scroll-line-inner {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ff5722;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* ── HERO ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes navIn {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100%); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── SERVICE CARD HOVER ── */
+.srv-card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 0;
+  background: linear-gradient(135deg, #202124 0%, #2d2d2d 100%);
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+.srv-card-hover:hover::before {
+  height: 100%;
+}
+
+/* ── PROJECT GRID TEXTURE ── */
+.proj-texture::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(255, 255, 255, 0.015) 8px,
+    rgba(255, 255, 255, 0.015) 9px
+  );
+  pointer-events: none;
+}
+
+/* ── RTL SUPPORT ── */
+[dir='rtl'] .ticker-track {
+  animation-direction: reverse;
+}
+[dir='rtl'] .hero-content {
+  direction: rtl;
+}
+[dir='rtl'] .vision2030-tab {
+  right: auto;
+  left: 0;
+  border-radius: 0 8px 8px 0;
+  animation-name: slideInLeft;
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-100%); }
+  to   { opacity: 1; transform: translateX(0); }
+}

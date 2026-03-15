@@ -1,0 +1,600 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Get a Quote"
+  },
+  "ticker": {
+    "items": [
+      "Steel Fabrication",
+      "Laser Cutting",
+      "Equipment Rental",
+      "Material Supply",
+      "Manpower Solutions",
+      "Architectural Panels",
+      "SCA Certified",
+      "VAT Registered"
+    ]
+  },
+  "hero": {
+    "tag": "Est. 2020 · Riyadh, KSA",
+    "heading1": "PRECISION STEEL.",
+    "heading2": "BUILT FOR",
+    "heading3": "SAUDI ARABIA.",
+    "sub": "Leading fabrication company delivering world-class steel fabrication, laser cutting, and industrial solutions across the Kingdom of Saudi Arabia.",
+    "stat1_num": "500+",
+    "stat1_label": "Projects Completed",
+    "stat2_num": "15+",
+    "stat2_label": "Major Clients",
+    "stat3_num": "SCA",
+    "stat3_label": "Certified",
+    "card_label": "Start a Project",
+    "card_title": "Got a Project?",
+    "card_sub": "Our engineering team is ready to provide expert consultation and competitive quotations for your next project.",
+    "card_cta": "Get a Quote →",
+    "card_secondary": "View Our Services",
+    "scroll": "Scroll to explore"
+  },
+  "services_section": {
+    "label": "What We Do",
+    "heading": "Precision Fabrication for Every Application",
+    "viewAll": "View All Services →",
+    "desc": "Four integrated service pillars delivering end-to-end industrial solutions with unmatched quality across Saudi Arabia."
+  },
+  "services": [
+    {
+      "num": "01 / 04",
+      "icon": "⚙️",
+      "title": "Steel Fabrication",
+      "body": "Custom structural components — beams, columns, trusses — precision cut, bent, and welded to exact design specifications.",
+      "href": "/services#structural"
+    },
+    {
+      "num": "02 / 04",
+      "icon": "⚡",
+      "title": "Laser Cutting",
+      "body": "Advanced fiber laser cutting for decorative panels, architectural screens, and precision components to ±0.1mm tolerance.",
+      "href": "/services#laser"
+    },
+    {
+      "num": "03 / 04",
+      "icon": "🏗",
+      "title": "Equipment Rental",
+      "body": "Full fleet: generators, excavators, bulldozers, cranes, forklifts, welding machines, and air compressors.",
+      "href": "/services#equipment"
+    },
+    {
+      "num": "04 / 04",
+      "icon": "📦",
+      "title": "Material & Manpower Supply",
+      "body": "Skilled workforce and comprehensive material supply — delivered on time to any site across Saudi Arabia.",
+      "href": "/services#supply"
+    }
+  ],
+  "serviceCard": {
+    "learnMore": "Learn More →"
+  },
+  "products_section": {
+    "label": "Our Products",
+    "heading": "Standard & Custom Steel Products",
+    "viewAll": "Browse All Products →"
+  },
+  "products": [
+    {
+      "icon": "🏛",
+      "tag": "Structural",
+      "title": "Structural Sections & Members",
+      "desc": "Wide flange columns, universal beams, and pre-fabricated trusses built to SCA and international standards."
+    },
+    {
+      "icon": "⬛",
+      "tag": "Laser-Cut",
+      "title": "Decorative & Laser-Cut Panels",
+      "desc": "Custom architectural screens, decorative façade panels, and precision flat bar in mild and high-strength grades."
+    },
+    {
+      "icon": "🔩",
+      "tag": "Assemblies",
+      "title": "Weld Assemblies & Sub-Frames",
+      "desc": "Shop-fabricated connections, skid base frames, and custom weldments with full material traceability."
+    }
+  ],
+  "projects_section": {
+    "label": "Project Showcase",
+    "heading": "Precision Steel. Built to Last.",
+    "viewAll": "View All Projects →"
+  },
+  "projects": {
+    "viewProject": "View Project →"
+  },
+  "clients_section": {
+    "label": "Our Partners",
+    "heading": "Trusted by Industry Leaders",
+    "desc": "Delivering precision steel work for government, defence, energy, and infrastructure clients across the Kingdom of Saudi Arabia.",
+    "certBadges": [
+      { "num": "SCA", "label": "Certified Contractor" },
+      { "num": "VAT", "label": "Registered" },
+      { "num": "SME", "label": "Certified" },
+      { "num": "500+", "label": "Projects Completed" }
+    ]
+  },
+  "contact_section": {
+    "label": "Get In Touch",
+    "heading1": "Let's build",
+    "heading2": "together",
+    "desc": "Ready to start your project? Our engineering team is standing by to provide expert consultation and competitive quotations.",
+    "email_label": "Email",
+    "phone_label": "WhatsApp / Phone",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "nameError": "Full name is required",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "emailError": "Valid email required",
+      "phone": "Phone",
+      "phonePlaceholder": "+966 ...",
+      "service": "Service Required",
+      "servicePlaceholder": "Steel Fabrication / Laser Cutting / Equipment...",
+      "message": "Project Details",
+      "messagePlaceholder": "Describe your project requirements...",
+      "messageError": "Please describe your project (min 10 characters)",
+      "submit": "Send Request →",
+      "sending": "Sending…",
+      "success": "✓ Your request has been sent. We'll be in touch within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "copy": "© {year} Edge Steel KSA · Riyadh, KSA · All rights reserved",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "meta": {
+    "home_title": "Edge Steel KSA — Precision Steel Fabrication",
+    "home_desc": "Leading steel fabrication company in Saudi Arabia. Structural steel, laser cutting, equipment rental, and manpower supply.",
+    "about_title": "About — Edge Steel KSA",
+    "services_title": "Services — Edge Steel KSA",
+    "products_title": "Products — Edge Steel KSA",
+    "projects_title": "Projects — Edge Steel KSA"
+  },
+  "servicesPage": {
+    "hero": {
+      "breadcrumb_home": "HOME",
+      "breadcrumb_services": "SERVICES",
+      "heading1": "Six Steel Services.",
+      "heading2": "Start to Finish.",
+      "sub": "Precision cutting, forming, rolling, galvanizing, and coating — all under one roof. Built for construction, industrial, and infrastructure programmes across Saudi Arabia."
+    },
+    "nav": [
+      { "label": "Laser Cutting", "href": "#laser" },
+      { "label": "Turret Punching", "href": "#punching" },
+      { "label": "CNC Bending", "href": "#bending" },
+      { "label": "Plate Rolling", "href": "#rolling" },
+      { "label": "Galvanizing", "href": "#galvanizing" },
+      { "label": "Painting & Coating", "href": "#painting" }
+    ],
+    "serviceBlocks": [
+      {
+        "id": "laser",
+        "num": "01",
+        "badge": "20KW · UP TO 80MM PLATE",
+        "serviceLabel": "SERVICE 01",
+        "title": "CNC Fiber Laser Cutting",
+        "image": "/media/service1.jpg",
+        "desc": "Edge Steel KSA operates high-power fiber laser cutting machines capable of processing mild steel up to 80mm thick and accommodating sheets up to 13 metres in length. Our cutting platform handles industrial components, oversized structural panels, and precision parts — all produced to ±0.1mm tolerance with clean, burr-minimised edges that reduce downstream finishing requirements.",
+        "specs": [
+          { "label": "LASER POWER", "value": "Up to 20 kW fiber source" },
+          { "label": "TABLE CAPACITY", "value": "13,000 × 3,500mm" },
+          { "label": "MILD STEEL", "value": "Up to 80mm thick" },
+          { "label": "STAINLESS STEEL", "value": "Up to 30mm thick" },
+          { "label": "CUT TOLERANCE", "value": "±0.1mm" },
+          { "label": "FORMATS ACCEPTED", "value": "DXF · DWG · STEP · PDF" }
+        ],
+        "steps": [
+          { "num": "01", "title": "File Review & DFM Check", "desc": "DXF/DWG files assessed for geometry, cut feasibility, and material suitability before production is confirmed." },
+          { "num": "02", "title": "Nesting & Material Optimisation", "desc": "Parts programmed for maximum yield — minimising scrap and keeping unit costs competitive." },
+          { "num": "03", "title": "Cut, Inspect & Despatch", "desc": "Edge quality and dimensional accuracy verified against drawing before every order leaves our facility." }
+        ],
+        "cta": "REQUEST A LASER CUTTING QUOTE →"
+      },
+      {
+        "id": "punching",
+        "num": "02",
+        "badge": "MTX MULTI-TOOL TECHNOLOGY",
+        "serviceLabel": "SERVICE 02",
+        "title": "CNC Turret Punching",
+        "image": "/media/service2.jpg",
+        "desc": "For dense hole patterns, ventilation slots, and formed features in sheet metal, Edge Steel KSA's CNC turret punching lines deliver the speed and repeatability laser cutting alone cannot match. Fitted with MTX multi-tool stations — multiple punch profiles active from a single station — our machines drastically cut setup time and cycle time on medium to high-volume production runs.",
+        "specs": [
+          { "label": "PROCESS", "value": "High-speed CNC turret punching" },
+          { "label": "TOOLING", "value": "MTX multi-tool stations" },
+          { "label": "MATERIALS", "value": "Carbon steel · Stainless · Aluminium" },
+          { "label": "APPLICATIONS", "value": "Panels · Enclosures · Perforated sheets" },
+          { "label": "QUALITY STANDARD", "value": "ISO 9001 Certified" },
+          { "label": "BATCH SIZE", "value": "Prototype to high-volume" }
+        ],
+        "steps": [
+          { "num": "01", "title": "Punch Layout & Tooling Review", "desc": "Engineering team optimises punch patterns, tool selection, and material orientation to shorten cycle time and reduce waste." },
+          { "num": "02", "title": "CAD/CAM Programming", "desc": "Designs converted to precise CNC machine programs with accurate positional data and efficient turret utilisation." },
+          { "num": "03", "title": "Punching & QC Inspection", "desc": "Every batch dimension-verified by our QC team to ISO 9001 standards — hole geometry, spacing, and edge condition confirmed." }
+        ],
+        "cta": "GET A TURRET PUNCHING QUOTE →"
+      },
+      {
+        "id": "bending",
+        "num": "03",
+        "badge": "MULTI-STAGE · TIGHT TOLERANCE",
+        "serviceLabel": "SERVICE 03",
+        "title": "CNC Press Brake Bending",
+        "image": "/media/service3.jpg",
+        "desc": "Edge Steel KSA's CNC press brake stations form carbon steel, stainless steel, and aluminium to precise angles — from straightforward single-fold components to intricate multi-stage profiles requiring tight bend-sequence management. Optimised tooling selection and sequencing eliminate spring-back, keeping formed dimensions on specification across every production volume.",
+        "specs": [
+          { "label": "PROCESS", "value": "CNC press brake forming" },
+          { "label": "MATERIALS", "value": "Carbon steel · Stainless · Aluminium" },
+          { "label": "GAUGE RANGE", "value": "Light to heavy gauge · Long sections" },
+          { "label": "ACCURACY", "value": "Consistent angles per drawing" },
+          { "label": "PRODUCTION", "value": "One-off to mass production" },
+          { "label": "QUALITY", "value": "ISO 9001 Certified processes" }
+        ],
+        "steps": [
+          { "num": "01", "title": "Drawing Review & Bend Sequence Plan", "desc": "Material properties, gauge, and geometry assessed to determine the optimal bend order before any tooling is configured." },
+          { "num": "02", "title": "Tool Setup & First-Off Trial", "desc": "Tooling configured and first article measured against approved drawings before full-run production is released." },
+          { "num": "03", "title": "Production Forming & Dimensional Check", "desc": "Angles and formed dimensions QC-verified at regular intervals throughout the production run." }
+        ],
+        "cta": "ENQUIRE ABOUT CNC BENDING →"
+      },
+      {
+        "id": "rolling",
+        "num": "04",
+        "badge": "CYLINDRICAL · CONICAL · CURVED",
+        "serviceLabel": "SERVICE 04",
+        "title": "Plate & Section Rolling",
+        "image": "/media/service4.jpg",
+        "desc": "Edge Steel KSA's rolling operations convert flat plate and structural sections into cylinders, cones, rings, and compound curves for tanks, vessels, pipes, curved frames, and infrastructure steelwork. Precise radius control and experienced operators ensure smooth, consistent curvature — free of surface defects and ready for immediate welding or downstream fabrication without corrective rework.",
+        "specs": [
+          { "label": "PLATE ROLLING", "value": "Cylindrical & conical shapes" },
+          { "label": "SECTION ROLLING", "value": "Angles · Channels · Beams · Profiles" },
+          { "label": "MATERIALS", "value": "Carbon steel · Stainless steel · Aluminium" },
+          { "label": "RADIUS CONTROL", "value": "CNC-assisted, repeatable" },
+          { "label": "APPLICATIONS", "value": "Tanks · Vessels · Pipes · Curved members" },
+          { "label": "QUALITY", "value": "ISO 9001 Certified" }
+        ],
+        "steps": [
+          { "num": "01", "title": "Radius Specification & Feasibility Review", "desc": "Required radii, material thickness, and section dimensions assessed to confirm rolling feasibility and set optimal machine parameters." },
+          { "num": "02", "title": "Rolling Operation", "desc": "Plates or sections passed through controlled rolling machines to achieve the specified curvature without surface damage or material stress." },
+          { "num": "03", "title": "Post-Roll Dimensional Inspection", "desc": "Roundness, radius, and geometry compliance verified before components are cleared for welding or assembly." }
+        ],
+        "cta": "GET A ROLLING SERVICES QUOTE →"
+      },
+      {
+        "id": "galvanizing",
+        "num": "05",
+        "badge": "ELECTRO · HOT-DIP · ISO CERTIFIED",
+        "serviceLabel": "SERVICE 05",
+        "title": "Galvanizing Services",
+        "image": "/media/service3.jpg",
+        "desc": "Saudi Arabia's coastal climates and heavy industrial environments demand dependable zinc protection. Edge Steel KSA provides electro galvanizing for precision components requiring tight dimensional tolerances and smooth finishes, alongside hot-dip galvanizing for structural steel, frames, handrails, and outdoor infrastructure — where enduring corrosion resistance and minimal maintenance over the service life are the priority.",
+        "specs": [
+          { "label": "METHOD 1", "value": "Electro Galvanizing (EG)" },
+          { "label": "METHOD 2", "value": "Hot-Dip Galvanizing (HDG)" },
+          { "label": "EG SUITED FOR", "value": "Enclosures · Brackets · Tight-tolerance parts" },
+          { "label": "HDG SUITED FOR", "value": "Structural frames · Outdoor infrastructure" },
+          { "label": "PROTECTION", "value": "Zinc sacrificial barrier coating" },
+          { "label": "QUALITY", "value": "ISO 9001 Certified · QC-verified thickness" }
+        ],
+        "steps": [
+          { "num": "01", "title": "Surface Cleaning & Preparation", "desc": "Components degreased, pickled, and flux-treated to ensure complete zinc adhesion and coating integrity across all surface areas." },
+          { "num": "02", "title": "Galvanizing Method Application", "desc": "EG or HDG applied based on service environment, component geometry, and performance specification requirements." },
+          { "num": "03", "title": "Coating Thickness Verification", "desc": "Zinc coating thickness measured and documented by QC engineering team; components released with full traceability records." }
+        ],
+        "cta": "REQUEST A GALVANIZING QUOTE →"
+      },
+      {
+        "id": "painting",
+        "num": "06",
+        "badge": "EPOXY · AIRLESS SPRAY · ISO 9001",
+        "serviceLabel": "SERVICE 06",
+        "title": "Industrial Painting & Coating",
+        "image": "/media/service4.jpg",
+        "desc": "A correctly specified and applied coating system determines how long fabricated steel performs in service. Edge Steel KSA delivers high-performance epoxy coating systems and airless spray painting for structural assemblies, industrial equipment, enclosures, and outdoor components — applying controlled film thickness through certified processes that guard against corrosion, chemical attack, and mechanical wear across the full service lifecycle.",
+        "specs": [
+          { "label": "COATING SYSTEMS", "value": "High-performance epoxy" },
+          { "label": "APPLICATION METHOD", "value": "Airless spray painting" },
+          { "label": "SURFACE PREPARATION", "value": "Degreasing · Mechanical preparation" },
+          { "label": "FILM CONTROL", "value": "Uniform DFT — QC verified" },
+          { "label": "APPLICATIONS", "value": "Structural steel · Equipment · Enclosures" },
+          { "label": "QUALITY", "value": "ISO 9001 Certified processes" }
+        ],
+        "steps": [
+          { "num": "01", "title": "Surface Preparation", "desc": "Degreasing, cleaning, and mechanical preparation carried out to the required standard — ensuring optimal adhesion and eliminating premature coating failure." },
+          { "num": "02", "title": "Coating System Selection", "desc": "Epoxy or airless spray system matched to component service environment, exposure class, and client specification." },
+          { "num": "03", "title": "Application & Finish Verification", "desc": "Coatings applied by experienced operators; dry film thickness, adhesion, and finish quality verified and documented before release." }
+        ],
+        "cta": "REQUEST A PAINTING QUOTE →"
+      }
+    ],
+    "statsBar": [
+      "±0.1MM CUT TOLERANCE",
+      "UP TO 80MM LASER CUTTING CAPACITY",
+      "13M LONG-FORMAT CUTTING TABLES",
+      "ELECTRO & HOT-DIP GALVANIZING",
+      "ISO 9001 CERTIFIED PROCESSES",
+      "INTEGRATED FABRICATION & FINISHING"
+    ],
+    "howWeWork": {
+      "label": "HOW WE WORK",
+      "heading1": "From Enquiry to Delivery —",
+      "heading2": "Every Step Accounted For",
+      "steps": [
+        { "code": "ENQ", "title": "Enquiry & File Review", "desc": "Submit drawings or project scope. Engineers review files and respond within 24 hours." },
+        { "code": "QTE", "title": "Quotation & DFM", "desc": "Detailed cost estimate issued with DFM feedback, material options, and lead time." },
+        { "code": "SCH", "title": "Production Schedule", "desc": "Manufacturing schedule confirmed with hold-point plan and QC inspection milestones." },
+        { "code": "MFG", "title": "Fabrication & Forming", "desc": "Production executed with progress updates at key milestones throughout manufacturing." },
+        { "code": "QCI", "title": "Final Inspection", "desc": "Dimensional checks, coating thickness, and surface condition — all documented." },
+        { "code": "DLV", "title": "Delivery & Records", "desc": "Components despatched with dimensional reports, material traceability, and coating records." }
+      ]
+    },
+    "testimonials": [
+      {
+        "stars": "★★★★★",
+        "quote": "Edge Steel KSA produced over 500 precision laser-cut panels for our industrial facility expansion in Jubail — every component within tolerance, with a hot-dip galvanized finish that sailed through third-party inspection on the first pass. Their integrated cutting-to-coating workflow eliminated weeks of vendor coordination from our programme.",
+        "initials": "DM",
+        "name": "Daoud Mansouri",
+        "role": "Procurement Manager, Tier 1 Industrial Contractor — Eastern Province, KSA"
+      },
+      {
+        "stars": "★★★★★",
+        "quote": "The CNC bending quality on our structural enclosure assemblies was consistently excellent — every angle matched the drawing, every time. The hot-dip galvanizing was applied to spec and fully documented. Edge Steel have become our preferred fabrication partner in the Kingdom.",
+        "initials": "KA",
+        "name": "Khalid Al-Amin",
+        "role": "Engineering Director, Industrial Equipment Manufacturer — Riyadh, KSA"
+      }
+    ],
+    "cta": {
+      "label": "GET STARTED TODAY",
+      "heading1": "Got a Project That",
+      "heading2": "Needs Precision?",
+      "desc": "Send us your drawings or outline your scope — our engineering team will respond within one business day with a technical review and competitive quotation.",
+      "button": "⚙ SEND YOUR DRAWINGS →"
+    }
+  },
+  "productsPage": {
+    "hero": {
+      "breadcrumb_home": "HOME",
+      "breadcrumb_products": "PRODUCTS",
+      "heading1": "Standard &",
+      "heading2": "Custom Products",
+      "sub": "Stock structural material and purpose-built formwork systems fabricated for Saudi Arabia's construction industry — or engineered to your exact project requirements. Every product is backed by certified material documentation and full QC traceability."
+    },
+    "filterTabs": {
+      "all": "ALL PRODUCTS",
+      "structural": "STRUCTURAL SECTIONS",
+      "formwork": "FORMWORK SYSTEMS",
+      "custom": "CUSTOM FABRICATIONS"
+    },
+    "countLabels": {
+      "all": "ALL",
+      "structural": "STRUCTURAL",
+      "formwork": "FORMWORK",
+      "custom": "CUSTOM"
+    },
+    "showing": "Showing {count} products",
+    "productsCount": "{count} products",
+    "featured": {
+      "seriesId": "ESK-FW SERIES 100",
+      "badge": "FEATURED PRODUCT",
+      "title": "ESK-FW100 Modular Column Formwork System",
+      "desc": "Shop-fabricated modular column moulds constructed from heavy-gauge structural steel plate with welded stiffener frames and precision-ground internal surfaces. Maintains accurate cross-section geometry and a smooth concrete finish across hundreds of casting cycles. Supplied in square, rectangular, and fully bespoke profiles to match your construction programme.",
+      "specs": [
+        { "label": "COLUMN PROFILE", "value": "Square / Rectangular / Custom" },
+        { "label": "PLATE GRADE", "value": "ASTM A36 / SASO 3048" },
+        { "label": "WELD QUALIFICATION", "value": "AWS D1.1 / ASME IX" },
+        { "label": "DIMENSIONAL TOLERANCE", "value": "\u00b11mm (fabricated)" },
+        { "label": "DELIVERY LEAD TIME", "value": "7\u201314 business days" }
+      ],
+      "requestBtn": "REQUEST THIS PRODUCT \u2192",
+      "downloadBtn": "DOWNLOAD SPEC"
+    },
+    "categories": {
+      "structural": { "num": "CATEGORY 01", "title": "Structural Sections & Material Supply" },
+      "formwork":   { "num": "CATEGORY 02", "title": "Concrete Formwork Systems" },
+      "custom":     { "num": "CATEGORY 03", "title": "Custom Fabrications & Bespoke Moulds" }
+    },
+    "products": [
+      {
+        "tag": "STRUCTURAL \u00b7 ANGLES",
+        "title": "Hot-Rolled L-Sections & Angle Stock",
+        "desc": "Equal and unequal leg structural angles produced to ASTM A36 and A572 Grade 50. Available saw-cut or shear-cut to specified lengths, with punched or drilled connection holes on request. Commonly used in bracing systems, secondary framing, and equipment support structures across Saudi Arabia.",
+        "price": "RFQ / per tonne",
+        "lead": "3\u20135 DAYS"
+      },
+      {
+        "tag": "STRUCTURAL \u00b7 PLATE",
+        "title": "Carbon Steel Flat Plate & Sheet",
+        "desc": "Hot-rolled and cold-rolled carbon steel plate across commercial and structural grades. Surface options include standard mill scale, pickled-and-oiled, and cold-reduced finishes. Blanks supplied cut to net size or sheared to width, ready for immediate downstream fabrication.",
+        "price": "RFQ / per tonne",
+        "lead": "2\u20134 DAYS"
+      },
+      {
+        "tag": "FORMWORK \u00b7 COLUMN",
+        "title": "Column & Pier Concrete Moulds",
+        "desc": "Precision-built steel column formwork designed for consistent reuse without geometric drift. Reinforced closure panels, bolt-down locking systems, and factory-set chamfer fillets — fabricated to approved shop drawings and verified by pre-shipment trial assembly for reliable site performance.",
+        "price": "RFQ / per unit",
+        "lead": "10\u201314 DAYS"
+      },
+      {
+        "tag": "FORMWORK \u00b7 BEAM",
+        "title": "Structural Beam Casting Forms",
+        "desc": "Robust steel casting forms for rectangular, T-beam, and inverted-beam profiles. Adjustable end platens, integrated lifting provisions, and smooth vibration-optimised inner faces minimise concrete adhesion and reduce post-cast finishing effort on high-throughput precast yards.",
+        "price": "RFQ / per unit",
+        "lead": "10\u201314 DAYS"
+      },
+      {
+        "tag": "CUSTOM \u00b7 BARRIER",
+        "title": "Roadway & Infrastructure Barrier Moulds",
+        "desc": "Engineered barrier formwork built for road safety structures, highway median dividers, and urban separation barriers. Hinged or detachable stripping panels accelerate cycle times on volume casting sites. Fully tailored to your specified barrier geometry, height, and reinforcement arrangement.",
+        "price": "RFQ / per project",
+        "lead": "14\u201321 DAYS"
+      }
+    ],
+    "requestQuote": "REQUEST QUOTE",
+    "downloadSpecSheet": "DOWNLOAD SPEC SHEET",
+    "comparison": {
+      "label": "PRODUCT COMPARISON",
+      "heading": "Standard vs. Custom \u2014",
+      "headingSub": "At a Glance",
+      "colFeature": "FEATURE",
+      "col1": "STANDARD STOCK",
+      "col2": "CUT-TO-LENGTH",
+      "col3": "CUSTOM FABRICATION",
+      "col4": "FULL PROGRAMME",
+      "cantFind": "CAN'T FIND IT?",
+      "rows": [
+        { "feature": "Material Certification",       "std": "\u2713", "ctl": "\u2713",        "custom": "\u2713", "full": "\u2713" },
+        { "feature": "Shop Drawing Package",          "std": "\u2717", "ctl": "\u2713",        "custom": "\u2713", "full": "\u2713" },
+        { "feature": "QC Dimensional Report",         "std": "\u2717", "ctl": "Optional",    "custom": "\u2713", "full": "\u2713" },
+        { "feature": "Bespoke Profile / Section",     "std": "\u2717", "ctl": "\u2713",        "custom": "\u2713", "full": "\u2713" },
+        { "feature": "Pre-Delivery Trial Assembly",   "std": "\u2717", "ctl": "\u2717",        "custom": "\u2713", "full": "\u2713" },
+        { "feature": "Typical Lead Time", "std": "2\u20134 days", "ctl": "4\u20137 days", "custom": "7\u201314 days", "full": "By programme" }
+      ]
+    },
+    "custom": {
+      "label": "CUSTOM FABRICATION",
+      "heading1": "We'll Build It",
+      "heading2": "From Scratch",
+      "desc": "If your project needs something not in our catalogue, our engineering team will take your sketch, DXF, or verbal brief and turn it into a production-ready fabrication \u2014 complete with full traceability and QC documentation.",
+      "features": [
+        { "icon": "\ud83d\udcd0", "bold": "Drawing or Sketch to Fabrication", "text": "Submit DXF files, PDF drawings, or a sketch \u2014 our team handles the engineering and production." },
+        { "icon": "\ud83d\udd2c", "bold": "Certified Material Documentation",  "text": "Every product ships with mill certificates, weld records, and a dimensional QC report." },
+        { "icon": "\ud83d\udce6", "bold": "Site-Ready Delivery Across KSA",   "text": "Packed, labelled, and delivered to your site anywhere in the Kingdom of Saudi Arabia." }
+      ],
+      "cta": "SUBMIT A CUSTOM ENQUIRY \u2192",
+      "configTitle": "// LIVE CONFIG EXAMPLE",
+      "configRows": [
+        { "key": "PRODUCT TYPE",       "val": "Column Concrete Mould" },
+        { "key": "PROFILE",            "val": "Square \u2014 400 \u00d7 400mm" },
+        { "key": "COLUMN HEIGHT",      "val": "3,600mm (adjustable)" },
+        { "key": "PLATE GRADE",        "val": "ASTM A36 / SASO 3048" },
+        { "key": "WELD STANDARD",      "val": "AWS D1.1 / ASME IX" },
+        { "key": "SURFACE TREATMENT",  "val": "Epoxy Primer \u2014 60\u00b5m DFT" },
+        { "key": "QC PACKAGE",         "val": "Dimensional Report + MT" },
+        { "key": "EST. LEAD TIME",     "val": "10\u201314 business days" }
+      ]
+    },
+    "cta": {
+      "heading": "Need a Quote on Any Product?",
+      "sub": "Upload your drawings or describe what you need \u2014 response within 2 hours.",
+      "btn": "\u2699 REQUEST A PRODUCT QUOTE \u2192"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "breadcrumb_home": "Home",
+      "breadcrumb_about": "About",
+      "heading1": "THE EDGE STEEL",
+      "heading2": "STORY",
+      "sub": "From a single Riyadh workshop to a full-spectrum industrial partner trusted by government ministries, defence entities, and Saudi Arabia's most ambitious developers \u2014 our growth is measured not in years, but in projects delivered."
+    },
+    "heroCards": [
+      { "icon": "\ud83d\udccd", "label": "Location",           "value": "Riyadh, Saudi Arabia" },
+      { "icon": "\ud83d\udcc5", "label": "Established",        "value": "2020" },
+      { "icon": "\ud83c\udfd7", "label": "Projects Completed", "value": "500+" },
+      { "icon": "\u2705",       "label": "Certification",      "value": "SCA \u00b7 VAT \u00b7 SME" }
+    ],
+    "story": {
+      "label":    "Our Story",
+      "heading1": "Rooted in Riyadh.",
+      "heading2": "Engineered for the Kingdom.",
+      "p1": "Edge Steel KSA was established in 2020 with a clear mandate: close the gap between the demand for precision steel fabrication and the standard of delivery Saudi Arabia's industrial sector genuinely deserved. What began as a structural fabrication operation has since evolved into a fully integrated industrial solutions provider \u2014 managing everything from CNC fiber laser cutting to heavy equipment mobilisation, material supply, and skilled manpower deployment.",
+      "p2": "Over five years of continuous operation, we have completed more than 500 projects for clients spanning national defence, energy infrastructure, hospitality, and commercial development. Our work is visible in the structural frameworks of commercial towers, the precision architectural screens defining civic fa\u00e7ades, and the rental equipment fleets that keep major construction sites running on schedule.",
+      "p3": "SCA certified, VAT registered, and SME accredited \u2014 these are not just credentials. They represent our commitment to governance, compliance, and the exacting standards that our government and enterprise clients require without compromise."
+    },
+    "storyStats": [
+      { "num": "500+", "label": "Projects completed across the Kingdom" },
+      { "num": "15+",  "label": "Major government & enterprise clients" },
+      { "num": "6",    "label": "Years of operational excellence" },
+      { "num": "100%", "label": "Projects delivered SCA compliant" }
+    ],
+    "values": {
+      "label":    "Core Values",
+      "heading1": "The Principles That",
+      "heading2": "Drive Us",
+      "sub": "Four operating principles that govern every fabrication decision, every delivery commitment, and every client relationship."
+    },
+    "valueItems": [
+      { "num": "01", "icon": "\ud83c\udfaf", "title": "Precision",   "desc": "From our CNC fiber laser units achieving \u00b10.1mm cutting accuracy to structural assemblies governed by exact weld specifications \u2014 tolerance is not a target, it is the standard we begin with." },
+      { "num": "02", "icon": "\ud83e\udd1d", "title": "Partnership", "desc": "We engage as an extension of your project team \u2014 understanding your programme schedule, technical constraints, and quality requirements before a single component enters production." },
+      { "num": "03", "icon": "\u26a1",       "title": "Speed",       "desc": "In-house fabrication, laser cutting, and equipment logistics under one roof eliminates the delays that multi-vendor supply chains create. Your programme timeline drives our production schedule." },
+      { "num": "04", "icon": "\ud83c\udfc6", "title": "Excellence",  "desc": "SCA certification, continuous capital investment in technology, and a leadership team with two decades of Saudi industrial experience define what we consider our baseline. Not a goal \u2014 a minimum." }
+    ],
+    "milestones": {
+      "label":   "Timeline",
+      "heading": "Key Milestones"
+    },
+    "milestoneItems": [
+      { "year": "2020", "title": "Founded",          "desc": "Edge Steel KSA launched in Riyadh, combining structural fabrication expertise with a precision-first delivery model for industrial and construction clients across the Kingdom." },
+      { "year": "2021", "title": "SCA Certification","desc": "Achieved Saudi Contractors Authority certification \u2014 qualifying Edge Steel KSA for government-tier and defence-sector contract participation and reinforcing our compliance framework." },
+      { "year": "2022", "title": "Laser Division",   "desc": "Commissioned a dedicated CNC fiber laser division, extending our in-house capabilities to precision architectural panels, decorative fa\u00e7ade screens, and tolerance-critical flat components." },
+      { "year": "2023", "title": "500+ Projects",    "desc": "Crossed the 500-project threshold, confirming our standing as a trusted fabrication partner across structural, architectural, and industrial applications throughout Saudi Arabia." },
+      { "year": "2024", "title": "Fleet Expansion",  "desc": "Significantly scaled our equipment rental fleet \u2014 integrating generators, excavators, cranes, forklifts, and welding machines \u2014 to support full-service site operations for major contractors." }
+    ],
+    "clients": {
+      "label":    "Our Clients",
+      "heading1": "Trusted at the",
+      "heading2": "Highest Levels",
+      "desc": "From national defence and energy infrastructure to flagship hospitality and commercial developments, our client portfolio reflects the confidence placed in Edge Steel KSA by the industries shaping the Kingdom's future."
+    },
+    "clientList": [
+      "Ministry of Interior",
+      "Saudi National Guard",
+      "Siemens KSA",
+      "Alfanar Projects",
+      "Riyadh Metro",
+      "Jadah Development",
+      "SAPCQ",
+      "Tarshid Energy"
+    ],
+    "team": {
+      "label":    "The Team",
+      "heading1": "The People Behind",
+      "heading2": "Every Weld",
+      "sub": "Our leadership combines deep structural engineering capability and precision fabrication expertise with two decades of hands-on experience across Saudi Arabia's most demanding construction and industrial programmes."
+    },
+    "teamMembers": [
+      {
+        "initials": "AA",
+        "name":     "Azhar Ali",
+        "role":     "Founder & Managing Director",
+        "desc":     "With more than 15 years embedded in Saudi Arabia's industrial construction sector, Azhar founded Edge Steel KSA to set a new performance benchmark in fabrication quality and project delivery. He operates with a hands-on approach \u2014 directly engaged in commercial strategy, major client relationships, and the technical decisions that determine outcomes on every large-scale programme."
+      },
+      {
+        "initials": "EO",
+        "name":     "Engineering Operations",
+        "role":     "Head of Fabrication & QC",
+        "desc":     "A certified welding supervisor with extensive international shop floor experience, our fabrication lead governs production scheduling, quality assurance, and all non-destructive testing and dimensional verification processes. Every component that leaves our facility meets specification \u2014 no exceptions, no compromises."
+      },
+      {
+        "initials": "PS",
+        "name":     "Projects & Site",
+        "role":     "Head of Project Delivery",
+        "desc":     "The direct interface between our production floor and active construction sites across the Kingdom. Our delivery lead manages multi-project scheduling, equipment mobilisation, on-site supervision, and logistics coordination \u2014 making certain that programme commitments are met, not renegotiated."
+      }
+    ],
+    "cta": {
+      "label":    "Work With Us",
+      "heading1": "Let\u2019s Build Your",
+      "heading2": "Next Project Together.",
+      "desc":     "Share your requirements with our engineering team and receive a technical review, material proposal, and competitive quotation \u2014 all within one business day.",
+      "button":   "\u2699 Engage Our Engineers \u2192"
+    }
+  }
+}
