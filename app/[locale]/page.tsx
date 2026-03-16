@@ -199,7 +199,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                     src={client.logo}
                     alt={client.name}
                     fill
-                    className="object-contain brightness-0 invert opacity-50 group-hover:opacity-80 transition-opacity duration-200"
+                    className="object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                   />
                 </div>
                 <span className="font-mono text-[10px] text-white/30 tracking-[0.05em] text-center uppercase group-hover:text-white/60 transition-colors duration-200">
