@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 
 const schema = z.object({
@@ -23,6 +23,7 @@ export default function ContactForm() {
   const t = useTranslations("contact_section.form");
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const {
     register,
@@ -36,19 +37,32 @@ export default function ContactForm() {
     setErrorMessage("");
 
     try {
+      const formData = new globalThis.FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
+      if (data.company) formData.append("company", data.company);
+      if (data.phone) formData.append("phone", data.phone);
+      if (data.service) formData.append("service", data.service);
+
+      const fileInput = fileInputRef.current;
+      if (fileInput?.files?.[0]) {
+        formData.append("attachment", fileInput.files[0]);
+      }
+
       const res = await fetch("/api/contact.php", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: formData,
       });
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        throw new Error(body.error ?? "Server error");
+        throw new Error(body.message ?? "Server error");
       }
 
       setStatus("success");
       reset();
+      if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (err) {
       setStatus("error");
       setErrorMessage(err instanceof Error ? err.message : "Unexpected error");
@@ -138,6 +152,19 @@ export default function ContactForm() {
         {errors.message && (
           <span className="text-[12px] text-red-500">{t("messageError")}</span>
         )}
+      </div>
+
+      <div className="flex flex-col gap-1.5">
+        <label className={labelClass}>{t("attachment")}</label>
+        <input
+          type="file"
+          ref={fileInputRef}
+          accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg"
+          className={`${inputClass} cursor-pointer file:mr-3 file:py-1 file:px-3 file:border-0 file:bg-cobalt/10 file:text-cobalt file:font-main file:text-[12px] file:cursor-pointer`}
+        />
+        <span className="text-[11px] text-slate">
+          {t("attachmentHint")}
+        </span>
       </div>
 
       {status === "error" && (

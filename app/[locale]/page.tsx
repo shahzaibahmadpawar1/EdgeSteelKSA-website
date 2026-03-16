@@ -6,6 +6,7 @@ import ServiceCard from "@/components/ServiceCard";
 import ProjectGrid from "@/components/ProjectGrid";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
+import Image from "next/image";
 import { locales } from "@/i18n";
 
 export function generateStaticParams() {
@@ -29,14 +30,14 @@ interface ProductItem { icon: string; tag: string; title: string; desc: string; 
 interface CertBadge { num: string; label: string; }
 
 const clients = [
-  "Ministry of Interior",
-  "National Guard",
-  "Siemens KSA",
-  "Alfanar Projects",
-  "Riyadh Metro",
-  "JADAH Development",
-  "SAPCQ",
-  "Tarshid Energy",
+  { name: "Ministry of Interior",  logo: "/media/partners/ministry-of-interior.png" },
+  { name: "National Guard",        logo: "/media/partners/national-guard.png" },
+  { name: "Siemens KSA",           logo: "/media/partners/siemens.png" },
+  { name: "Alfanar Projects",      logo: "/media/partners/alfanar.png" },
+  { name: "Riyadh Metro",          logo: "/media/partners/riyadh-metro.png" },
+  { name: "JADAH Development",     logo: "/media/partners/jadah.png" },
+  { name: "SAPCQ",                 logo: "/media/partners/sapcq.png" },
+  { name: "Tarshid Energy",        logo: "/media/partners/tarshid.png" },
 ];
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
@@ -188,13 +189,21 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </div>
 
           <div className="grid grid-cols-4 max-lg:grid-cols-2 max-[480px]:grid-cols-1 gap-px bg-white/[0.06] border border-white/[0.06]">
-            {clients.map((name) => (
+            {clients.map((client) => (
               <div
-                key={name}
-                className="bg-black/30 px-6 py-7 flex items-center justify-center transition-colors duration-200 hover:bg-white/[0.05]"
+                key={client.name}
+                className="bg-black/30 px-6 py-8 flex flex-col items-center justify-center gap-3 transition-colors duration-200 hover:bg-white/[0.05] group"
               >
-                <span className="font-mono text-[12px] font-bold text-white/45 tracking-[0.05em] text-center uppercase transition-colors duration-200 hover:text-white/80">
-                  {name}
+                <div className="relative h-40 w-full">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    className="object-contain brightness-0 invert opacity-50 group-hover:opacity-80 transition-opacity duration-200"
+                  />
+                </div>
+                <span className="font-mono text-[10px] text-white/30 tracking-[0.05em] text-center uppercase group-hover:text-white/60 transition-colors duration-200">
+                  {client.name}
                 </span>
               </div>
             ))}

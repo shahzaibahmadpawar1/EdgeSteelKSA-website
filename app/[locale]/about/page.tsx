@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
+import Image from "next/image";
 import { locales } from "@/i18n";
 
 export function generateStaticParams() {
@@ -29,6 +30,17 @@ export default async function AboutPage({ params }: { params: { locale: string }
   const storyStats     = t.raw("storyStats")     as StoryStat[];
   const teamMembers    = t.raw("teamMembers")    as TeamMember[];
   const clientList     = t.raw("clientList")     as string[];
+
+  const clientLogos: Record<string, string> = {
+    "Ministry of Interior":  "/media/partners/ministry-of-interior.png",
+    "Saudi National Guard":  "/media/partners/national-guard.png",
+    "Siemens KSA":           "/media/partners/siemens.png",
+    "Alfanar Projects":      "/media/partners/alfanar.png",
+    "Riyadh Metro":          "/media/partners/riyadh-metro.png",
+    "Jadah Development":     "/media/partners/jadah.png",
+    "SAPCQ":                 "/media/partners/sapcq.png",
+    "Tarshid Energy":        "/media/partners/tarshid.png",
+  };
 
   return (
     <>
@@ -190,18 +202,25 @@ export default async function AboutPage({ params }: { params: { locale: string }
           </div>
 
           {/* Client grid */}
-          <div
-            className="grid grid-cols-4 max-md:grid-cols-2 border border-border"
-            style={{ borderCollapse: "collapse" }}
-          >
+          <div className="grid grid-cols-4 max-md:grid-cols-2 border border-border">
             {clientList.map((client, i) => (
               <div
                 key={client}
-                className={`font-mono text-[11px] tracking-[0.14em] uppercase font-bold text-charcoal text-center px-6 py-7 border-border${
+                className={`flex flex-col items-center justify-center gap-3 px-6 py-8 group border-border${
                   i % 4 !== 3 ? " border-r" : ""
                 }${i < 4 ? " border-b" : ""}`}
               >
-                {client}
+                <div className="relative h-40 w-full">
+                  <Image
+                    src={clientLogos[client] ?? "/media/partners/fallback.png"}
+                    alt={client}
+                    fill
+                    className="object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
+                <span className="font-mono text-[10px] tracking-[0.14em] uppercase font-bold text-slate text-center group-hover:text-charcoal transition-colors duration-300">
+                  {client}
+                </span>
               </div>
             ))}
           </div>

@@ -147,7 +147,9 @@
       "submit": "Send Request →",
       "sending": "Sending…",
       "success": "✓ Your request has been sent. We'll be in touch within 24 hours.",
-      "error": "Something went wrong. Please try again."
+      "error": "Something went wrong. Please try again.",
+      "attachment": "Attach Document",
+      "attachmentHint": "PDF, Word, Excel, or Images — Max 5 MB"
     }
   },
   "footer": {

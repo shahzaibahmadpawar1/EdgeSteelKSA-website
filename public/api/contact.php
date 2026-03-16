@@ -1,23 +1,21 @@
 <?php
 /**
  * Edge Steel KSA — Contact Form API
- * Place this file at: /public/api/contact.php
- * Or serve via a separate PHP server and proxy with Next.js rewrites.
- *
- * Accepts: POST application/json
- * Returns: application/json { success: bool, message: string }
  */
-
 declare(strict_types=1);
 
-// ── Security headers ──────────────────────────────────────────────────────────
-header('Content-Type: application/json; charset=utf-8');
-header('X-Content-Type-Options: nosniff');
-header('X-Frame-Options: DENY');
+// 1. Load PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-// ── CORS (tighten origin in production) ───────────────────────────────────────
-$allowedOrigin = getenv('ALLOWED_ORIGIN') ?: 'https://edgesteelksa.com';
-header("Access-Control-Allow-Origin: {$allowedOrigin}");
+require __DIR__ . '/phpmailer/src/Exception.php';
+require __DIR__ . '/phpmailer/src/PHPMailer.php';
+require __DIR__ . '/phpmailer/src/SMTP.php';
+
+// 2. Security & CORS Headers
+header('Content-Type: application/json; charset=utf-8');
+header("Access-Control-Allow-Origin: *"); 
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
@@ -26,103 +24,67 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['success' => false, 'message' => 'Method not allowed']);
-    exit;
-}
-
-// ── Parse JSON body ───────────────────────────────────────────────────────────
-$raw  = file_get_contents('php://input');
-$data = json_decode($raw, true);
-
-if (json_last_error() !== JSON_ERROR_NONE || !is_array($data)) {
-    http_response_code(400);
-    echo json_encode(['success' => false, 'message' => 'Invalid JSON body']);
-    exit;
-}
-
-// ── Input validation ──────────────────────────────────────────────────────────
-$errors = [];
-
+// 3. Parse Input
+$data = $_POST;
 $name    = trim($data['name']    ?? '');
-$company = trim($data['company'] ?? '');
 $email   = trim($data['email']   ?? '');
+$company = trim($data['company'] ?? '');
 $phone   = trim($data['phone']   ?? '');
 $service = trim($data['service'] ?? '');
 $message = trim($data['message'] ?? '');
 
-if (strlen($name) < 2) {
-    $errors[] = 'Name is required (min 2 characters).';
-}
+$mail = new PHPMailer(true);
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'A valid email address is required.';
-}
+try {
+    // 4. ENABLE DEBUGGING HERE
+    $mail->SMTPDebug = 2; 
+    $mail->Debugoutput = function($str, $level) {
+        error_log("SMTP DEBUG: $str"); // Also saves to cPanel error_log
+        echo "$str\n";                // Sends to browser Network tab
+    };
 
-if (strlen($message) < 10) {
-    $errors[] = 'Message must be at least 10 characters.';
-}
+    // 5. SMTP Settings
+    $mail->isSMTP();
+    $mail->Host       = 'mail.edgesteelksa.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'info@edgesteelksa.com';
+    $mail->Password   = 'wSq@7qnYs7VAmmvS'; 
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
 
-if (!empty($errors)) {
-    http_response_code(422);
-    echo json_encode(['success' => false, 'message' => implode(' ', $errors)]);
-    exit;
-}
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
 
-// ── Sanitise for email output (prevent header injection) ─────────────────────
-$safeName    = htmlspecialchars($name,    ENT_QUOTES, 'UTF-8');
-$safeCompany = htmlspecialchars($company, ENT_QUOTES, 'UTF-8');
-$safeEmail   = htmlspecialchars($email,   ENT_QUOTES, 'UTF-8');
-$safePhone   = htmlspecialchars($phone,   ENT_QUOTES, 'UTF-8');
-$safeService = htmlspecialchars($service, ENT_QUOTES, 'UTF-8');
-$safeMessage = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
+    // 6. Recipients
+    $mail->setFrom('info@edgesteelksa.com', 'Edge Steel Website');
+    $mail->addAddress('info@edgesteelksa.com');
+    $mail->addReplyTo($email, $name);
 
-// ── Build email ───────────────────────────────────────────────────────────────
-$toEmail   = getenv('CONTACT_EMAIL') ?: 'info@edgesteelksa.com';
-$fromEmail = 'noreply@edgesteelksa.com';
+    // 7. Content
+    $mail->isHTML(true);
+    $mail->Subject = "New Quote Request from " . htmlspecialchars($name);
+    $mail->Body    = "<h3>Contact Details</h3>
+                      <p><strong>Name:</strong> " . htmlspecialchars($name) . "</p>
+                      <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
+                      <p><strong>Company:</strong> " . htmlspecialchars($company) . "</p>
+                      <p><strong>Phone:</strong> " . htmlspecialchars($phone) . "</p>
+                      <p><strong>Service Required:</strong> " . htmlspecialchars($service) . "</p>
+                      <p><strong>Message:</strong><br>" . nl2br(htmlspecialchars($message)) . "</p>";
 
-$subject = "New Quote Request from {$safeName}";
+    // 8. Attachment
+    if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] === UPLOAD_ERR_OK) {
+        $mail->addAttachment($_FILES['attachment']['tmp_name'], $_FILES['attachment']['name']);
+    }
 
-$body = <<<EOT
-New contact form submission — Edge Steel KSA
-=============================================
+    $mail->send();
 
-Name:     {$safeName}
-Company:  {$safeCompany}
-Email:    {$safeEmail}
-Phone:    {$safePhone}
-Service:  {$safeService}
+    echo json_encode(['success' => true, 'message' => 'Sent successfully']);
 
-Message:
-{$safeMessage}
-
----
-Submitted: {$_SERVER['REQUEST_TIME']}
-EOT;
-
-// RFC 2822 compliant headers — newlines stripped to prevent injection
-$headers  = "From: Edge Steel KSA Website <{$fromEmail}>\r\n";
-$headers .= "Reply-To: {$safeEmail}\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$headers .= "X-Mailer: EdgeSteelKSA-PHP\r\n";
-
-// ── Send ──────────────────────────────────────────────────────────────────────
-$sent = mail($toEmail, $subject, $body, $headers);
-
-if ($sent) {
-    http_response_code(200);
-    echo json_encode([
-        'success' => true,
-        'message' => "Thank you, {$safeName}. We've received your request and will respond within 24 hours.",
-    ]);
-} else {
-    // Log the failure server-side (never expose internal details to client)
-    error_log("Edge Steel KSA: mail() failed for submission from {$safeEmail}");
-    http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'message' => 'Failed to send your request. Please email us directly at info@edgesteelksa.com.',
-    ]);
+} catch (Exception $e) {
+    echo json_encode(['success' => false, 'message' => $mail->ErrorInfo]);
 }
